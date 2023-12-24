@@ -60,7 +60,7 @@ To change these values you can :
     df1 = pd.read_excel('input/1.xlsx', usecols=[0], parse_dates=[0])
     df2 = pd.read_excel('input/2.xlsx', usecols=[1], dtype={'B': int})
     df3 = pd.read_excel('input/3.xlsx', usecols=[2], dtype={'C': int})
-  ```
+  
 - Name the output columns and set the amount of rows to those of one of the dataframes
   - ```python
     df1.columns = ['Date']
@@ -70,7 +70,7 @@ To change these values you can :
     # Make sure the number of rows in df2 and df3 match df1 by truncating excess rows
     df2 = df2[:len(df1)]
     df3 = df3[:len(df1)]
-  ```
+
 - Concatenate the columns into a single DataFrame, set the name of the output file and write the final file
   - ```python
     # Concatenate the three DataFrames into a single one along the column axis
@@ -88,7 +88,7 @@ To change these values you can :
 
     # Write the DataFrame to an excel file, on a sheet named 'Data', and without row index
     final_df.to_excel(writer, sheet_name='Data', index=False)
-  ```
+
 - Run the script using `python3 script.py` while the virtual environment is activated.
 
 ## Output
