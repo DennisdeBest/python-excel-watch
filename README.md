@@ -46,6 +46,15 @@ pip install pandas xlsxwriter openpyxl
 
 ## Usage
 
+The example take 3 input files, the first with just a column of dates and the other 2 with columns of integers.
+The final output amount of rows will be limited to the amount of rows in the first Excel file.
+The final output has 3 sheets:
+- Data: 3 columns with the date values from file 1 and the values from file 2 and 3
+- Charts: A line chart based on the dates of the file 1 and the values of the other files and a pie chart showing the difference of the totals of file 2 and 3.
+- Summary: A Sheet with the sums of the values from the data chart used to generated the pie chart
+
+To change these values you can : 
+
 - Set the Excel files and the columns from which data needs to be gathered
   - ```python
     df1 = pd.read_excel('input/1.xlsx', usecols=[0], parse_dates=[0])
